@@ -643,13 +643,13 @@ git push
 `init.sql`, and run `docker compose up -d` again. The schema change does
 **not** appear in the database. Why not, and how do you force re-initialisation?
 
-> *Your answer:*
+> *Your answer:*   The init script runs only when the database volume is empty. To apply changes, remove the volume with docker compose down -v and start the containers again.
 
 **Question 7.2:** `GENERATED ALWAYS AS IDENTITY` is used instead of
 `SERIAL`. What is the practical difference? Which one is the modern
 SQL-standard approach?
 
-> *Your answer:*
+> *Your answer:*    GENERATED ALWAYS AS IDENTITY is the modern SQL standard. SERIAL is an older PostgreSQL-specific feature.
 
 ---
 
