@@ -108,13 +108,13 @@ docker system df
 **Question 1.1:** The flag `-d` starts the container in detached mode.
 What happens without `-d`, and why is detached mode useful for a web server?
 
-> *Your answer:*
+> *Your answer:*    Without -d, the container stays attached to your terminal — it blocks the terminal and stops if you close the session or press Ctrl+C. Detached mode is useful for a web server because the server needs to run continuously in the background, independent of any terminal session.
 
 **Question 1.2:** `-p 8080:80` maps host port 8080 to container port 80.
 Which port is the application actually listening on inside the container?
 What would `-p 9000:80` change?
 
-> *Your answer:*
+> *Your answer:*   Nginx always listens on port 80 inside the container — that never changes. The -p flag only maps the host port. So with -p 9000:80, you'd access it via localhost:9000 instead of :8080, but nginx itself still listens on 80 internally.
 
 ---
 
