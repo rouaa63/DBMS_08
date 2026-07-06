@@ -295,6 +295,8 @@ docker volume inspect pg_data
 > container recreation, and the `docker volume inspect` output.
 >
 > `[insert screenshot]`
+> <img width="864" height="627" alt="dbms8_5" src="https://github.com/user-attachments/assets/932b8535-4ca9-4871-8e5e-82ae6931d466" />
+
 
 ### Step 3 – Clean Up
 
