@@ -512,6 +512,8 @@ curl http://localhost:8000/studenten
 > `curl /` response.
 >
 > `[insert screenshot]`
+> <img width="1532" height="198" alt="dbms8_7" src="https://github.com/user-attachments/assets/47c5b7bd-2cd2-4432-b8cc-779af30b7e5b" />
+
 
 ### Step 5 – Observe Compose Networking
 
