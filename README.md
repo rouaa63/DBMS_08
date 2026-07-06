@@ -831,6 +831,8 @@ curl http://localhost:8000/studenten
 > final image size and the working `curl` response.
 >
 > `[insert screenshot]`
+> <img width="1532" height="697" alt="10" src="https://github.com/user-attachments/assets/55dc030d-01d1-4b76-8df7-f38b4a44ed4f" />
+
 
 ### Step 5 – Commit
 
@@ -846,13 +848,13 @@ git push
 environment from the builder stage. The final image does not contain `pip` or
 `uv`. What security advantage does this provide?
 
-> *Your answer:*
+> *Your answer:*   Using a multi-stage build keeps the final image smaller and reduces the attack surface. Build tools such as pip and uv are not included in the production image, so there are fewer unnecessary components that could contain vulnerabilities.
 
 **Question 9.2:** The builder stage installs dependencies from `pyproject.toml`
 before copying the application code. Why does this ordering improve build
 cache efficiency when you frequently change only `main.py`?
 
-> *Your answer:*
+> *Your answer:*   Docker can reuse the cached dependency installation layer because pyproject.toml has not changed. Only the application code layer needs to be rebuilt, which makes subsequent builds much faster.
 
 ---
 
