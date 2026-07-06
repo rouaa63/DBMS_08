@@ -181,13 +181,13 @@ git push -u origin main
 `apt-get install`, and `rm -rf /var/lib/apt/lists/*` in a single line?
 What would happen to the image size if these were three separate `RUN` lines?
 
-> *Your answer:*
+> *Your answer:*   Combining the commands into one RUN creates only one image layer and removes unnecessary cache files. Using three separate RUN commands would create more layers and make the image larger.
 
 **Question 2.2:** `EXPOSE 80` in a Dockerfile does **not** actually open port
 80. What does it do, and what is required at `docker run` time to actually
 forward a port?
 
-> *Your answer:*
+> *Your answer:*  EXPOSE 80 only documents that the container uses port 80. To access it from the host, you must publish the port with docker run -p, for example -p 8080:80.
 
 ---
 
