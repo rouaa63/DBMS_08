@@ -531,8 +531,8 @@ docker compose down
 docker compose down -v   # also removes the named volume
 ```
 
-> **Question:** What is the difference between `down` and `down -v`?
-> When would you use each?
+> **Question:** What is the difference between `down` and `down -v`?  docker compose down stops and removes containers and networks, but keeps the volumes and data. docker compose down -v also removes the volumes, deleting all stored data.
+> When would you use each?  Use down to keep the data, and down -v when you want a fresh database or a complete reset.
 
 ### Step 7 – Commit
 
@@ -548,13 +548,13 @@ git push -u origin main
 starts before `api`. Does it guarantee that PostgreSQL is **ready to accept
 connections** when the API starts? What is the correct way to handle this?
 
-> *Your answer:*
+> *Your answer:* depends_on only controls the start order. It does not guarantee that PostgreSQL is ready. The application should use a health check or retry until the database is available.
 
 **Question 6.2:** The `api` service uses `volumes: - ./api:/app` (a bind
 mount). What is the advantage of this during development compared to
 `COPY`-ing the code into an image at build time?
 
-> *Your answer:*
+> *Your answer:*   A bind mount lets you edit the code without rebuilding the image. COPY requires rebuilding the image after every code change.
 
 ---
 
