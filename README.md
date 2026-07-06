@@ -898,6 +898,8 @@ docker compose exec api whoami
 > returning `appuser`.
 >
 > `[insert screenshot]`
+> <img width="723" height="159" alt="11" src="https://github.com/user-attachments/assets/51df2b56-2ef6-479d-be44-017731562b8f" />
+
 
 ### Step 3 – Commit
 
