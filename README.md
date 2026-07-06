@@ -626,7 +626,8 @@ curl http://localhost:8000/studenten
 > **Screenshot 8:** Take a screenshot showing the `curl /studenten` response
 > with all four rows.
 >
-> `[insert screenshot]`
+> <img width="729" height="107" alt="dbms8_8" src="https://github.com/user-attachments/assets/539d9cb5-1cec-4479-afdd-b59516b7acb2" />
+
 
 ### Step 4 – Commit
 
