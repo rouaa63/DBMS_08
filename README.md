@@ -238,13 +238,13 @@ docker exec -it pg psql -U postgres -c "SELECT * FROM test;"
 `postgres:16` still exists on your machine. Why does recreating a container
 from the same image not restore the data?
 
-> *Your answer:*
+> *Your answer:*    The image contains the software, but not the container's data. When the container is removed, its data is lost unless it is stored in a volume.
 
 **Question 3.2:** `docker stop` sends SIGTERM and waits for the process to
 exit cleanly. `docker kill` sends SIGKILL immediately. Why is `docker stop`
 preferred for a database container?
 
-> *Your answer:*
+> *Your answer:*    docker stop allows PostgreSQL to shut down safely and save its data. docker kill stops it immediately, which may cause data loss or corruption.
 
 ---
 
