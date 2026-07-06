@@ -388,13 +388,13 @@ docker volume rm pg_data
 the default bridge. Why can containers on the default bridge **not** resolve
 each other by name, while containers on a user-defined bridge can?
 
-> *Your answer:*
+> *Your answer:*     Containers on the default bridge cannot resolve each other by name. A user-defined bridge provides automatic DNS, so containers can communicate using their names.
 
 **Question 5.2:** You could find the IP address of the `pg` container with
 `docker inspect` and hard-code it. Why is using the container name as a
 hostname strongly preferable?
 
-> *Your answer:*
+> *Your answer:*   Container IP addresses can change. Using the container name is more reliable because Docker automatically resolves it to the correct IP.
 
 ---
 
