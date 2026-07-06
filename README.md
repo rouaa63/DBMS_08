@@ -164,7 +164,8 @@ exit
 > **Screenshot 3:** Take a screenshot showing the `docker build` output and
 > the commands run inside the container.
 >
-> `[insert screenshot]`
+> <img width="1515" height="505" alt="dbms_3" src="https://github.com/user-attachments/assets/30de057d-b7f9-47a3-82c5-936dbe0d997c" />
+
 
 ### Step 4 – Commit
 
