@@ -743,13 +743,13 @@ git push
 What is the standard practice to document which variables are required
 without committing the actual secrets?
 
-> *Your answer:*
+> *Your answer:*       The standard practice is to create an example file such as .env.example that lists all required environment variables with placeholder values, but without real passwords or secrets. The real .env file is excluded from Git using .gitignore.
 
 **Question 8.2:** Even with `.env` excluded from git, the password is still
 stored in plain text on disk. Name one mechanism Docker provides for
 production-grade secret management that avoids plain-text env files entirely.
 
-> *Your answer:*
+> *Your answer:*  Docker Secrets is a mechanism for production environments that securely stores sensitive information and provides it to containers at runtime without storing passwords in plain-text environment files.
 
 ---
 
