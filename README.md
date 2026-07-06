@@ -53,7 +53,8 @@ docker compose version
 
 > **Screenshot 1:** Take a screenshot showing both version outputs.
 >
-> `[insert screenshot]`
+> `[insert screenshot]`                                                                               <img width="572" height="136" alt="dbms8_1" src="https://github.com/user-attachments/assets/adf49434-8d26-4f70-9f14-61e3e31f4b03" />
+
 
 ---
 
