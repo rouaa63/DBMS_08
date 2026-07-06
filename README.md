@@ -914,13 +914,13 @@ git push
 **Question 10.1:** The `USER appuser` instruction is placed after
 `COPY . .`. Why would placing it *before* `COPY` cause a permission problem?
 
-> *Your answer:*
+> *Your answer:*  If USER appuser is placed before COPY . ., the copied files may be owned by the non-root user or the copy operation may fail because the user does not have enough permissions to write into the working directory. Copying the files as root first and switching to appuser afterwards avoids these permission issues.
 
 **Question 10.2:** State the **Principle of Least Privilege** in one
 sentence, and name one other place in a typical web application stack
 (outside of containers) where this principle is applied.
 
-> *Your answer:*
+> *Your answer:*  The principle of least privilege means that a user or process should only have the minimum permissions required to perform its task. An example outside containers is a database user that only has permission to access the specific tables and operations required by the application instead of having full administrative privileges.
 
 ---
 
@@ -931,19 +931,19 @@ Section 6 of the lecture shows a Dockerfile that runs both PostgreSQL and
 FastAPI in a single container. Describe two concrete operational problems
 this causes in a production environment.
 
-> *Your answer:*
+> *Your answer:*  Running PostgreSQL and FastAPI in a single container causes operational problems because both services cannot be managed independently. For example, scaling the API requires scaling the database as well, which wastes resources. Also, updates or failures in one service can affect the other service and make maintenance more difficult.
 
 **Question B – Volume vs. Bind Mount:**  
 Compare named volumes and bind mounts. When is each type appropriate?
 
-> *Your answer:*
+> *Your answer:*  Named volumes are managed by Docker and are recommended for persistent data such as databases because they are portable and safer. Bind mounts directly connect a host directory to a container and are mainly useful during development when frequently changing source code, because changes are immediately visible inside the container.
 
 **Question C – Compose and Reproducibility:**  
 A colleague says: "I can just write the `docker run` commands in a shell
 script — why do I need `docker-compose.yml`?" Give two specific advantages
 of Compose over a shell script of `docker run` commands.
 
-> *Your answer:*
+> *Your answer:*  Docker Compose provides a declarative configuration file that describes all services, networks, volumes, and environment variables in one place. It also makes the application reproducible because another developer can start the same environment with a single command instead of manually running many docker run commands.
 
 **Question D – The Complete Chain:**  
 You have now built and containerised the full stack: PostgreSQL in a
@@ -952,7 +952,7 @@ non-root image → both orchestrated by Docker Compose with credentials
 in `.env`. Describe in two sentences what each layer contributes to
 **portability** and **security**.
 
-> *Your answer:*
+> *Your answer:* The PostgreSQL container with a named volume and init script provides persistent and reproducible database setup, while the FastAPI slim image with a non-root user improves security and reduces unnecessary components. Docker Compose connects and manages all services consistently, and using .env keeps credentials separated from the source code to improve security.
 
 ---
 
