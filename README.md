@@ -80,6 +80,8 @@ docker images
 > `docker images` output.
 >
 > `[insert screenshot]`
+> <img width="917" height="645" alt="dbms8_2" src="https://github.com/user-attachments/assets/f2bdfeee-10a0-4a7c-81fc-af03dfc81675" />
+
 
 ### Step 2 – Run an nginx Webserver
 
