@@ -346,6 +346,8 @@ docker run --rm -it postgres:16 \
 > **Screenshot 6:** Take a screenshot showing the connection error.
 >
 > `[insert screenshot]`
+> <img width="901" height="264" alt="dbms8_6" src="https://github.com/user-attachments/assets/9b8f9d44-1ba4-495f-9962-3590c4db3b85" />
+
 
 ### Step 2 – Fix It With a Custom Bridge Network
 
