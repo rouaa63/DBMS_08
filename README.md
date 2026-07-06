@@ -734,6 +734,7 @@ git push
 > `.env` is not staged, and the working `curl` response.
 >
 > `[insert screenshot]`
+<img width="1532" height="192" alt="image" src="https://github.com/user-attachments/assets/fa70d7c1-5172-4080-b6f9-9953bd5f9d0d" />
 
 ### Questions for Section 8
 
