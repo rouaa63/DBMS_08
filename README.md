@@ -311,13 +311,13 @@ docker volume rm pg_data
 the host filesystem. Why is it still recommended to use named volumes instead
 of bind-mounting that path directly with `-v /var/lib/docker/volumes/...`?
 
-> *Your answer:*
+> *Your answer:*       Named volumes are managed by Docker and are more reliable. Binding Docker's internal directory directly is not recommended because it may change and cause permission issues.
 
 **Question 4.2:** You want to back up the database. Which `docker` command
 lets you copy files out of a running container, and how would you copy the
 volume contents to a `.tar.gz` archive on the host?
 
-> *Your answer:*
+> *Your answer:*  Use docker cp to copy files from a running container. Then create an archive with tar -czf backup.tar.gz.
 
 ---
 
